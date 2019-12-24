@@ -1,0 +1,22 @@
+.inputClass{
+  width: 25% !important;
+}
+
+.container{
+  margin: auto;
+  width: 300px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#userInputArea{
+  background-color: #c6c8cc;
+  width: 500px;
+}
+
+.allLinks{
+  font-family: 'Bebas Neue', cursive;
+}
+
+.copyrightClass{
+  font-family: 'Sulphur Point', sans-serif;
+}

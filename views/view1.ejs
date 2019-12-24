@@ -1,0 +1,64 @@
+<%- include("header")  -%>
+
+
+
+<a href="view2" class="allLinks"><i class="fas fa-balance-scale fa-2x"></i>View Existing Entries</a>
+
+
+<div class="container">
+
+
+
+  <small id="emailHelp" class="form-text text-muted">
+    Start mongod from github
+  </small>
+
+  <div id="userInputArea">
+
+    <form action="insert" method="post">
+
+      <div class="form-group">
+        <label for="date" class="labelmargin"><i class="fas fa-clock"></i>Date</label>
+        <input type="text" name="date" value="" class="form-control inputClass"> <br />
+        <label for="amount" class="labelmargin" class="form-control inputClass"><i class="fas fa-donate"></i>Amount</label>
+        <input type="text" name="amount" value="" class="form-control inputClass"> <br />
+      </div>
+      <div class="form-group">
+        <label for="src" class="labelmargin"><i class="fas fa-piggy-bank"></i>  Source</label>
+        <select class="" name="src" class="form-control">
+          <option value="RBC_SAN_MAIN">Sandeep's RBC Main Account</option>
+          <option value="RBC_SAN_SAV">Sandeep's RBC High Interest Savings Account</option>
+          <option value="RBC_SAN_CC1">Sandeep's RBC CC (ending: 8496)</option>
+          <option value="RBC_SAN_GIC">Sandeep's RBC GIC Account</option>
+          <option value="RBC_SAN_CC1">Sandeep's CapOne CC (ending: 3838)</option>
+          <option value="RBC_SAN_MAIN" class="lapy">Lapy's RBC Main Account</option>
+          <option value="RBC_SAN_MAIN" class="lapy">Lapy's Walmart CC(ending:2048)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="dest" class="labelmargin"><i class="fas fa-money-check-alt"></i>Destination</label>
+        <select class="" name="dest">
+          <option value="ND" class="nodestn">No Destn.</option>
+          <option value="RBC_SAN_MAIN">Sandeep's RBC Main Account</option>
+          <option value="RBC_SAN_SAV">Sandeep's RBC High Interest Savings Account</option>
+          <option value="RBC_SAN_CC1">Sandeep's RBC CC (ending: 8496)</option>
+          <option value="RBC_SAN_GIC">Sandeep's RBC GIC Account</option>
+          <option value="RBC_SAN_CC1">Sandeep's CapOne CC (ending: 3838)</option>
+          <option value="RBC_SAN_MAIN" class="lapy">Lapy's RBC Main Account</option>
+          <option value="RBC_SAN_MAIN" class="lapy">Lapy's Walmart CC(ending:2048)</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="desc" class="labelmargin"><i class="fas fa-comments-dollar"></i>Description</label>
+        <input type="text" name="desc" value="" class="form-control"> <br />
+        <label for="img" class="labelmargin"><i class="fas fa-expand"></i>Receipt Image</label>
+        <input type="text" name="img" value="" class="form-control inputClass"> <br />
+        <input type="submit" name="submit" value="SUBMIT" class="submitbtnView1 btn btn-primary">
+      </div>
+
+    </form>
+
+  </div>
+
+
+</div> <%- include("footer")  -%>

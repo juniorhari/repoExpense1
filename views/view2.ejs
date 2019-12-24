@@ -1,0 +1,60 @@
+<%- include("header")  -%>
+
+
+<a href="view1" class="allLinks"><i class="far fa-keyboard fa-2x"></i>Enter a new expense</a>
+
+<div class="container">
+
+
+  <div class="divForms">
+
+    <form class="form2" action="getAll" method="post">
+      <i class="fas fa-clock"><input type="submit" name="GETALL" value="GET EXISTING ENTRIES" class="btn btn-link"></i> <br />
+    </form>
+
+
+
+  </div>
+
+  <div id="resultDiv">
+
+    <table class="table">
+
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col"><i class="fas fa-clock"></i>Date</th>
+          <th scope="col"><i class="fas fa-donate"></i>Amt</th>
+          <th scope="col"><i class="fas fa-search-dollar"></i>From Account</th>
+          <th scope="col"><i class="fas fa-box-open"></i>To Account</th>
+          <th scope="col"><i class="fas fa-file-signature"></i>Description</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% var total = 0;  %>
+        <% retArr.forEach(element => { %>
+        <tr>
+          <td> <%= element.date %> </td>
+          <td> <%= element.amount %> </td>
+          <td> <%= element.src %> </td>
+          <td> <%= element.dest %> </td>
+          <td> <%= element.desc %> </td>
+          <% total = total + element.amount; %>
+        </tr>
+        <% }); %>
+        <%  total = parseInt(total); %>
+
+    </TABLE>
+    <div id="total">
+      Total is: <b>
+        <%= total %>
+      </b>
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<%- include("footer")  -%>
