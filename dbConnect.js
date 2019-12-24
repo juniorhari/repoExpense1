@@ -9,8 +9,8 @@ var locuri = "mongodb://localhost/" + dbName;
 var uri = "mongodb+srv://cluster0-ou0wn.mongodb.net/test";
 var options = {
   useNewUrlParser: true,
-  user: "junior_hari1",
-  pass: "okpass12345"
+  user: process.env.JUNIOR_USER,
+  pass: process.env.JUNIOR_PASS
 };
 
 module.exports.connectDB = mongoose.connect(uri, options, function(err){
